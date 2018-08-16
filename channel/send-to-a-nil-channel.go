@@ -16,6 +16,10 @@ func main() {
 
 	// The same with case receive from a nil channel block forever
 	// until another goroutine send data to it
+
+	// main function is single process, so when write to channel c
+	// main process are block util another process read data from channel c
+	// so -> program block forever -> deadlock
 	var c1 chan string
 	fmt.Println(<-c1)
 

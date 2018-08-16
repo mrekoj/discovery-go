@@ -13,7 +13,7 @@ func main() {
 				c <- j
 			}
 			// Channel close in first loop, so the remain can't send value to channel c
-			close(c)
+			//close(c)
 		}()
 	}
 
